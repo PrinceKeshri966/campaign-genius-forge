@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,36 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				brand: {
+					50: '#f0f1fe',
+					100: '#e2e4fc',
+					200: '#c8cefa',
+					300: '#aeb7f7',
+					400: '#9b87f5', // Primary brand color
+					500: '#7d69f0',
+					600: '#6a4ee3',
+					700: '#5a3ec8',
+					800: '#4a36a3',
+					900: '#3d3080',
+					950: '#241c52',
+				},
+				success: {
+					DEFAULT: '#10b981',
+					light: '#d1fae5',
+				},
+				warning: {
+					DEFAULT: '#f59e0b',
+					light: '#fef3c7',
+				},
+				error: {
+					DEFAULT: '#ef4444',
+					light: '#fee2e2',
+				},
+				info: {
+					DEFAULT: '#3b82f6',
+					light: '#dbeafe',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +114,16 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-gentle': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.7' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-gentle': 'pulse-gentle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
 			}
 		}
 	},
